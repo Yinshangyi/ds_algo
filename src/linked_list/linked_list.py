@@ -31,8 +31,26 @@ class LinkedList:
             tail = tail.next
         tail.next = new_node
 
+    def get_count_iter(self):
+        if self.head is None:
+            return 0
+        node_counter = 0
+        current_node = self.head
+        while current_node is not None:
+            node_counter = node_counter + 1
+            current_node = current_node.next
+        return node_counter
+
+    def get_count_rec(self):
+        return self.node_count_rec(self.head)
+
+    def node_count_rec(self, node: Node):
+        if not node:
+            return 0
+        return 1 + self.node_count_rec(node.next)
+
     def get_representation(self):
-        if self.head is Node:
+        if self.head is None:
             return "The LinkedList is empty"
         linked_list_status = ""
         current_node = self.head

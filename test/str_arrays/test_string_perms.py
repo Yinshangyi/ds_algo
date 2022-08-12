@@ -1,4 +1,4 @@
-from src import is_strings_permutations, sort_string
+from src.str_arrays.string_perms import is_strings_permutations, sort_string
 
 
 def test_sort_string():

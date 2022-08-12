@@ -65,3 +65,21 @@ def test_append_node():
     assert linked_list.head.next.data == 2
     assert linked_list.head.next.next.data == 3
     assert linked_list.head.next.next.next.data == 4
+
+
+def test_get_count_nodes_iter():
+    linked_list = LinkedList()
+    linked_list.push(3)
+    linked_list.push(2)
+    linked_list.push(1)
+    number_nodes = linked_list.get_count_iter()
+    assert number_nodes == 3
+
+
+def test_get_count_nodes_rec():
+    linked_list = LinkedList()
+    linked_list.push(3)
+    linked_list.push(2)
+    linked_list.push(1)
+    number_nodes = linked_list.get_count_rec()
+    assert number_nodes == 3

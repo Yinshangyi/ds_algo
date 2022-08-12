@@ -1,4 +1,4 @@
-from src import check_string_all_unique_chars
+from src.str_arrays.string_unique_char import check_string_all_unique_chars
 
 
 def test_string_all_unique_chars_ok():
